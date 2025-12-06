@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="Core/Library.Application/Library.Application.csproj" />
+    <Project Path="Core/Library.Contract/Library.Contract.csproj" />
+    <Project Path="Core/Library.Domain/Library.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Library.Persistence/Library.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/Library.WebApi/Library.WebApi.csproj" />
+  </Folder>
+</Solution>
