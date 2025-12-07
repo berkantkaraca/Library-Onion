@@ -11,13 +11,11 @@ namespace Library.WebApi.Controllers
     [ApiController]
     public class AuthorController : ControllerBase
     {
-        private readonly IMapper _mapper;
         private readonly IMediator _mediator;
 
-        public AuthorController(IMediator mediator, IMapper mapper)
+        public AuthorController(IMediator mediator)
         {
             _mediator = mediator;
-            _mapper = mapper;
         }
 
         [HttpGet]
