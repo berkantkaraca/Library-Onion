@@ -6,6 +6,7 @@
   </Folder>
   <Folder Name="/Infrastructure/">
     <Project Path="Infrastructure/Library.Persistence/Library.Persistence.csproj" />
+    <Project Path="Infrastructure/Library.Validators/Library.Validators.csproj" Id="a61c20a8-adc7-453e-a40d-0863e6559102" />
   </Folder>
   <Folder Name="/Presentation/">
     <Project Path="Presentation/Library.WebApi/Library.WebApi.csproj" />

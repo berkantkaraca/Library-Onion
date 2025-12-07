@@ -1,3 +1,7 @@
+using Library.Application.DependencyResolvers;
+using Library.WebApi.MapperResolvers;
+using Library.Persistence.DependencyResolvers;
+using Library.Validators.DependencyResolvers;
 
 namespace Library.WebApi
 {
@@ -6,13 +10,15 @@ namespace Library.WebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddHandlerService();
+            builder.Services.AddDbContextServices();
+            builder.Services.AddRepositoryServices();
+            builder.Services.AddValidatorServices();
+            builder.Services.AddVmMapperService();
 
             var app = builder.Build();
 
