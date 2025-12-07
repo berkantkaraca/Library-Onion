@@ -1,5 +1,4 @@
 using Library.Application.DependencyResolvers;
-using Library.WebApi.MapperResolvers;
 using Library.Persistence.DependencyResolvers;
 using Library.Validators.DependencyResolvers;
 
@@ -15,10 +14,10 @@ namespace Library.WebApi
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddHandlerService();
+            builder.Services.AddMapperService();
             builder.Services.AddDbContextServices();
             builder.Services.AddRepositoryServices();
             builder.Services.AddValidatorServices();
-            builder.Services.AddVmMapperService();
 
             var app = builder.Build();
 
