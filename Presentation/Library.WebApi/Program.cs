@@ -19,6 +19,8 @@ namespace Library.WebApi
             builder.Services.AddRepositoryServices();
             builder.Services.AddValidatorServices();
 
+            builder.Services.AddCors();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,6 +32,7 @@ namespace Library.WebApi
 
             app.UseAuthorization();
 
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.MapControllers();
 
